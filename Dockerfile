@@ -73,6 +73,7 @@ ENV PATH=/app/bin:${PATH}
 
 WORKDIR /TTS-0.3.0/TTS/server
 
+# Install model
 RUN tts --text "hello, world!"
 
 CMD ["python3", "server.py"]
