@@ -24,3 +24,11 @@ resource null_resource ecr_image {
        EOF
  }
 }
+
+data aws_ecr_image coqui_image {
+ depends_on = [
+   null_resource.ecr_image
+ ]
+ repository_name = local.ecr_repository_name
+ image_tag       = local.ecr_image_tag
+}
