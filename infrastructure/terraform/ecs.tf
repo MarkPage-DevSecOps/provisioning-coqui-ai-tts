@@ -6,7 +6,8 @@ data "template_file" "myapp" {
   template = file("./templates/ecs/myapp.json.tpl")
 
   vars = {
-    app_image      = var.app_image
+    # app_image      = var.app_image
+    app_image      = "${aws_ecr_repository.repo.repository_url}@${data.aws_ecr_image.lambda_image.id}"
     app_port       = var.app_port
     fargate_cpu    = var.fargate_cpu
     fargate_memory = var.fargate_memory

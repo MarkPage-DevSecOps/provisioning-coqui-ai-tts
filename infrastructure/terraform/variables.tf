@@ -15,7 +15,7 @@ variable "az_count" {
 
 variable "app_image" {
   description = "Docker image to run in the ECS cluster"
-  default     = "markpage2k1/coqui-tts:v0.3.1"
+  # default     = "markpage2k1/coqui-tts:v0.3.1"
 }
 
 variable "app_port" {
