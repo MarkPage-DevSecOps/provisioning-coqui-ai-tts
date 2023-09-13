@@ -1,18 +1,14 @@
-name: IaC Provision API Whisper
+name: IaC Provision API Coqui AI
 on:
-  # workflow_dispatch:
-  #   inputs:
-  #     choice-branch:
-  #       type: choice
-  #       description: "Choose the environment (branches) to provision."
-  #       required: true
-  #       default: 'dev'
-  #       options: ['dev', 'prod'] 
+  workflow_dispatch:
+    inputs:
+      choice-branch:
+        type: choice
+        description: "Choose the environment (branches) to provision."
+        required: true
+        default: 'dev'
+        options: ['dev', 'prod'] 
 
-  push:
-    branches:
-      - dev
-  #     # - prod
 
 permissions:
   contents: read
